@@ -117,3 +117,20 @@ a:hover { text-decoration: underline; }
 .subscribe__title { font-size: 1.1rem; margin: 0 0 0.5rem; }
 .subscribe p { margin: 0 0 1rem; }
 .empty { color: var(--muted); }
+
+.thanks__body p { margin: 0 0 1.2em; }
+.thanks__links {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.thanks__links a {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+}
+.thanks__links a:hover { background: var(--accent); color: var(--bg); text-decoration: none; }

@@ -142,3 +142,14 @@ a:hover { text-decoration: underline; }
   border-radius: 4px;
 }
 .thanks__links a:hover { background: var(--accent); color: var(--accent-contrast); text-decoration: none; }
+
+.links {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.links__heading { font-size: 1.1rem; margin: 0 0 0.75rem; color: var(--main); }
+.links__group-title { font-size: 0.95rem; margin: 1.25rem 0 0.25rem; color: var(--muted); font-weight: 600; }
+.links__list { list-style: none; padding: 0; margin: 0; }
+.links__item { padding: 0.15rem 0; }
+.links__note { font-size: 0.85rem; color: var(--muted); margin-left: 0.5em; }

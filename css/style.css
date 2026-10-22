@@ -146,10 +146,20 @@ a:hover { text-decoration: underline; }
 .links {
   margin-top: 3rem;
   padding-top: 1.5rem;
-  border-top: 1px solid var(--border);
+  border-top: 2px solid var(--main);
 }
-.links__heading { font-size: 1.1rem; margin: 0 0 0.75rem; color: var(--main); }
-.links__group-title { font-size: 0.95rem; margin: 1.25rem 0 0.25rem; color: var(--muted); font-weight: 600; }
+.links__intro { margin: 0 0 1.5rem; }
+.links__heading { font-size: 1.15rem; margin: 0 0 1.25rem; color: var(--accent); }
 .links__list { list-style: none; padding: 0; margin: 0; }
-.links__item { padding: 0.15rem 0; }
-.links__note { font-size: 0.85rem; color: var(--muted); margin-left: 0.5em; }
+.links__item {
+  display: grid;
+  grid-template-columns: 1.5rem 1fr;
+  gap: 0 0.75rem;
+  margin: 0 0 1.25rem;
+}
+.links__icon { color: var(--accent); line-height: 0; padding-top: 0.35rem; }
+.links__icon svg { width: 1.5rem; height: 1.5rem; }
+.links__title { margin: 0; font-size: 1.15rem; font-weight: 600; color: var(--main); line-height: 1.6; }
+.links__sep { color: var(--muted); font-weight: 400; margin: 0 0.1em; }
+.links__note { display: inline-block; font-size: 0.95rem; color: var(--fg); }
+.links__note:hover { color: var(--accent); }

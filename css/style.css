@@ -116,14 +116,9 @@ a:hover { text-decoration: underline; }
 .post__body pre code { background: none; padding: 0; }
 .post__body hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
 
-.subscribe {
-  margin-top: 3rem;
-  padding: 1.5rem;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-}
-.subscribe__title { font-size: 1.1rem; margin: 0 0 0.5rem; color: var(--main); }
-.subscribe p { margin: 0 0 1rem; }
+/* Kit の埋め込みフォーム(自前の背景・枠線・文字色を持つ)を置くだけの余白 */
+.subscribe { margin-top: 3rem; }
+.subscribe .formkit-form { margin: 0 auto; }
 .empty { color: var(--muted); }
 
 .thanks__body p { margin: 0 0 1.2em; }

@@ -8,6 +8,8 @@
   --accent-contrast: #F4F3F1;
   --border: #DCD9D3;
   --code-bg: #EAE8E4;
+  --form-bg: #F4F3F1;
+  --form-input-bg: #FFFFFF;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -19,6 +21,8 @@
     --accent-contrast: #0E1730;
     --border: #2A3450;
     --code-bg: #1A2440;
+    --form-bg: #16213F;
+    --form-input-bg: #0E1730;
   }
 }
 * { box-sizing: border-box; }
@@ -116,9 +120,31 @@ a:hover { text-decoration: underline; }
 .post__body pre code { background: none; padding: 0; }
 .post__body hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
 
-/* Kit の埋め込みフォーム(自前の背景・枠線・文字色を持つ)を置くだけの余白 */
+/* Kit の埋め込みフォーム。色はインラインスタイルで固定されているので、
+   !important でサイトのテーマ(ライト/ダーク)に合わせて上書きする。
+   セレクタはフォーム ID(data-uid)に依存させず、貼り替えても効くようにしている */
 .subscribe { margin-top: 3rem; }
-.subscribe .formkit-form { margin: 0 auto; }
+.subscribe .formkit-form {
+  margin: 0 auto;
+  background-color: var(--form-bg) !important;
+  border-color: var(--border) !important;
+}
+.subscribe .formkit-form .formkit-header,
+.subscribe .formkit-form .formkit-subheader {
+  color: var(--main) !important;
+}
+.subscribe .formkit-form .formkit-input {
+  background: var(--form-input-bg) !important;
+  color: var(--fg) !important;
+  border-color: var(--border) !important;
+}
+.subscribe .formkit-form .formkit-input:focus { border-color: var(--accent) !important; }
+.subscribe .formkit-form .formkit-input::placeholder { color: var(--muted) !important; opacity: 1 !important; }
+.subscribe .formkit-form .formkit-submit {
+  background-color: var(--accent) !important;
+  color: var(--accent-contrast) !important;
+}
+.subscribe .formkit-form .formkit-guarantee { color: var(--muted) !important; }
 .empty { color: var(--muted); }
 
 .thanks__body p { margin: 0 0 1.2em; }

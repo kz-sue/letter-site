@@ -10,6 +10,7 @@
   --code-bg: #EAE8E4;
   --form-bg: #F4F3F1;
   --form-input-bg: #FFFFFF;
+  --logo-frame: #DCD9D3;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -23,6 +24,7 @@
     --code-bg: #1A2440;
     --form-bg: #16213F;
     --form-input-bg: #0E1730;
+    --logo-frame: #F4F3F1;
   }
 }
 * { box-sizing: border-box; }
@@ -55,6 +57,25 @@ a:hover { text-decoration: underline; }
 }
 .site-title { font-weight: 700; font-size: 1.15rem; color: var(--main); }
 .site-nav a { font-size: 0.9rem; color: var(--muted); }
+/* ヘッダー画像版: 画像を全幅で出し、その下にナビを右寄せ。
+   画像の背景が明るいので、ダークモードでは明るい枠で囲って意図的な見た目にする */
+.site-header--image {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.6rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1rem;
+}
+.site-header--image .site-title { display: block; line-height: 0; }
+.site-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 3px solid var(--logo-frame);
+  border-radius: 12px;
+  background: #F4F3F1;
+}
+.site-header--image .site-nav { text-align: right; }
 .site-main { padding-top: 2rem; padding-bottom: 3rem; }
 .site-footer {
   padding-top: 1.5rem;
